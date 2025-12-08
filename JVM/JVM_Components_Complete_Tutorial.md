@@ -124,16 +124,16 @@ The Class Loader Subsystem performs three main functions:
 └─────────────────────────────────────────┘
             ↓
 ┌─────────────────────────────────────────┐
-│  2. LINKING                              │
+│  2. LINKING                             │
 │     ┌──────────────────────────────┐    │
-│     │ a. Verification               │    │
-│     │    - Bytecode validation      │    │
-│     │    - Security checks          │    │
+│     │ a. Verification              │    │
+│     │    - Bytecode validation     │    │
+│     │    - Security checks         │    │
 │     └──────────────────────────────┘    │
 │     ┌──────────────────────────────┐    │
 │     │ b. Preparation               │    │
 │     │    - Allocates memory        │    │
-│     │    - Sets default values      │    │
+│     │    - Sets default values     │    │
 │     └──────────────────────────────┘    │
 │     ┌──────────────────────────────┐    │
 │     │ c. Resolution                │    │
@@ -143,7 +143,7 @@ The Class Loader Subsystem performs three main functions:
 └─────────────────────────────────────────┘
             ↓
 ┌─────────────────────────────────────────┐
-│  3. INITIALIZATION                       │
+│  3. INITIALIZATION                      │
 │     - Executes static blocks            │
 │     - Initializes static variables      │
 │     - Calls <clinit>() method           │
@@ -358,8 +358,8 @@ public class HeapDemo {
 │  ┌───────────────────────────────┐  │
 │  │   Frame: main()               │  │ ← Top
 │  │   - Local variables           │  │
-│  │   - Parameters               │  │
-│  │   - Return address           │  │
+│  │   - Parameters                │  │
+│  │   - Return address            │  │
 │  └───────────────────────────────┘  │
 │  ┌───────────────────────────────┐  │
 │  │   Frame: method1()            │  │
@@ -430,7 +430,7 @@ Thread 2: PC Register = 0x2000 (pointing to instruction at address 0x2000)
 
 ```
 ┌─────────────────────────────────────────┐
-│         Execution Engine                 │
+│         Execution Engine                │
 ├─────────────────────────────────────────┤
 │  ┌───────────────────────────────────┐  │
 │  │  1. Interpreter                   │  │
@@ -440,7 +440,7 @@ Thread 2: PC Register = 0x2000 (pointing to instruction at address 0x2000)
 │  ┌───────────────────────────────────┐  │
 │  │  2. JIT Compiler                  │  │
 │  │     - Compiles hot code to native │  │
-│  │     - Improves performance         │  │
+│  │     - Improves performance        │  │
 │  └───────────────────────────────────┘  │
 │  ┌───────────────────────────────────┐  │
 │  │  3. Garbage Collector             │  │
@@ -605,16 +605,16 @@ public class MemoryModelDemo {
 
 ```
 ┌─────────────────────────────────────┐
-│  Method Area                         │
-│  - classVariable = 100               │
-│  - Class metadata                    │
+│  Method Area                        │
+│  - classVariable = 100              │
+│  - Class metadata                   │
 └─────────────────────────────────────┘
 
 ┌─────────────────────────────────────┐
 │  Stack (main method frame)          │
 │  - localVar = 10                    │
-│  - obj (reference to heap)           │
-│  - array (reference to heap)         │
+│  - obj (reference to heap)          │
+│  - array (reference to heap)        │
 └─────────────────────────────────────┘
             ↓ (references)
 ┌─────────────────────────────────────┐
