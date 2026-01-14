@@ -16,22 +16,33 @@ class designPattern
     }
 }
 
-interface Animal {
+interface Animal 
+{
     void makeSound();
 }
 
 
-class Dog implements Animal {
-    public void makeSound() { System.out.println("Woof!"); }
+class Dog implements Animal 
+{
+    public void makeSound() 
+    {
+        System.out.println("Woof!"); 
+   }
 }
 
-class Cat implements Animal {
-    public void makeSound() { System.out.println("Meow!"); }
+class Cat implements Animal 
+{
+    public void makeSound()
+    {
+        System.out.println("Meow!");
+    }
 }
 
 
-class AnimalFactory {
-    public Animal createAnimal(String type) {
+class AnimalFactory 
+{
+    public Animal createAnimal(String type) 
+    {
         if (type.equals("dog")) return new Dog();
         if (type.equals("cat")) return new Cat();
         return null;
