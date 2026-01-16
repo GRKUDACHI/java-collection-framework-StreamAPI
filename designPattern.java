@@ -12,7 +12,7 @@ class designPattern
         
         AnimalFactory factory = new AnimalFactory();
         Animal dog = factory.createAnimal("dog");
-        dog.makeSound(); // Woof!
+        dog.makeSound(); 
     }
 }
 
